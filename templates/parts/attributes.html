@@ -10,32 +10,6 @@
         data-roll-attribute="{{attribute_name}}"
         >{{localize (concat attribute.label '')}}</a
       >
-      <!-- attribute xp -->
-      <div class="stripe-tooth-body right">
-        {{#multiboxes attribute.exp}}
-        <input
-          type="radio"
-          id="character-{{../owner._id}}-{{attribute_name}}-exp-0"
-          name="system.attributes.{{attribute_name}}.exp"
-          value="0"
-          checked="checked"
-          class="zero"
-        />
-        {{#times_from_1 attribute.exp_max}}
-        <input
-          type="radio"
-          id="character-{{../../owner._id}}-{{attribute_name}}-{{this}}"
-          name="system.attributes.{{attribute_name}}.exp"
-          value="{{this}}"
-          dtype="Radio"
-          class="radio-toggle"
-        />
-        <label
-          for="character-{{../../owner._id}}-{{attribute_name}}-{{this}}"
-          class="{{#if (gte attribute.exp @this)}}on{{/if}} radio-toggle"
-        ></label>
-        {{/times_from_1}} {{/multiboxes}}
-      </div>
       {{/if}}
     </header>
     <!-- actions -->

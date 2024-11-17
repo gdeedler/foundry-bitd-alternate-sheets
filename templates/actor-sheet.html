@@ -65,7 +65,7 @@
       <div class="abilities-list">
         {{#each my_abilities}}<span data-tooltip="{{clean-html this.system.description}}" class="v10-tooltip">{{clean-name this.name}}</span>&nbsp;{{#unless @last}}-&nbsp;{{/unless}}{{/each}}
       </div>
-      
+
       {{> "modules/bitd-alternate-sheets/templates/parts/attributes.html" owner=this.actor}}
       </section>
     </section>
@@ -98,16 +98,6 @@
             <section class="abilities">
               <header class="full-bar">
                 <span class="context-abilities">{{localize "BITD.SpecialAbilities"}}</span>{{#if allow_edit}}<a class="ability-add-popup add-button" data-item-type="ability" data-group-by="system.class"><i class="fas fa-plus"></i></a>{{/if}}
-                <div class="stripe-tooth-body right">
-                {{#multiboxes system.experience}}
-                  <input type="radio" id="{{actor._id}}-experience-0"
-                        name="system.experience" value="0" checked="checked" class="zero">
-                  {{#times_from_1 system.experience_max}}
-                    <input type="radio" id="character-{{../actor._id}}-experience-{{this}}" name="system.experience" value="{{this}}" dtype="Radio" class="radio-toggle" >
-                    <label for="character-{{../actor._id}}-experience-{{this}}" class="{{#if (gte ../system.experience @this)}}on{{/if}} radio-toggle"  ></label>
-                  {{/times_from_1}}
-                {{/multiboxes}}
-                </div>
               </header>
               <section class="ability-list check-list">
                 {{#each available_playbook_abilities as |ability index|}}

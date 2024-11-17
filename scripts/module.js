@@ -7,7 +7,7 @@ import { registerHandlebarsHelpers } from "./handlebars-helpers.js";
 import { registerHooks } from "./hooks.js";
 
 Hooks.once("init", function () {
-  console.log("Initializing Blades in the Dark Alternate Sheets");
+  console.log("Initializing Blades in the Dark Alternate Sheets DEEP CUTS EDITION");
   // CONFIG.debug.hooks = true;
   Actors.registerSheet("bitd-alt", BladesAlternateActorSheet, {
     types: ["character"],

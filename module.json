@@ -1,6 +1,6 @@
 {
   "name": "bitd-alternate-sheets",
-  "title": "Blades in the Dark Alternate Sheets",
+  "title": "Blades in the Dark Alternate Sheets DEEP CUTS EDITION",
   "description": "",
   "version": "0.0.1",
   "library": "false",
@@ -27,13 +27,29 @@
   "conflicts": [],
   "flags": {
     "hotReload": {
-      "extensions": ["hbs", "css", "html"],
-      "paths": ["templates", "templates/parts", "langs", "styles", "images"]
+      "extensions": [
+        "hbs",
+        "css",
+        "html"
+      ],
+      "paths": [
+        "templates",
+        "templates/parts",
+        "langs",
+        "styles",
+        "images"
+      ]
     }
   },
-  "esmodules": ["/scripts/module.js"],
-  "scripts": ["scripts/lib/markdown-it.min.js"],
-  "styles": ["/styles/css/bitd-alt.css"],
+  "esmodules": [
+    "/scripts/module.js"
+  ],
+  "scripts": [
+    "scripts/lib/markdown-it.min.js"
+  ],
+  "styles": [
+    "/styles/css/bitd-alt.css"
+  ],
   "languages": [
     {
       "lang": "en",

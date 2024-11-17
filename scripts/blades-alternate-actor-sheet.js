@@ -366,7 +366,7 @@ export class BladesAlternateActorSheet extends BladesSheet {
       "showAliasInDirectory"
     );
     const actorData = sheetData.data;
-    sheetData.actor = actorData;
+    console.log('TESTING: getData:', actorData)
     sheetData.system = actorData.system;
     sheetData.coins_open = this.coins_open;
     sheetData.harm_open = this.harm_open;
@@ -963,6 +963,27 @@ export class BladesAlternateActorSheet extends BladesSheet {
         this.load_open = false;
       }
     });
+
+    html.find('.coin-plus').click((ev) => {
+      console.log('EXP PLUS CLICKED TEST', this.object.system.experience)
+      let experience = this.object.system.experience
+      const clockToIncrement = `clock${Math.floor(experience / 6)}`
+      this.object.system[clockToIncrement] = `systems/blades-in-the-dark/styles/assets/progressclocks-svg/Progress Clock 6-${(experience % 6) + 1}.svg`
+      experience = Number(experience) + 1 + '';
+      this.object.system.experience = experience
+      this.object.setFlag('bitd-alternate-sheets', 'experience', "5")
+      this.render(true)
+    })
+
+    html.find('.coin-minus').click((ev) => {
+      console.log('EXP PLUS CLICKED TEST', this.object.system.experience)
+      let experience = this.object.system.experience
+      const clockToDecrement = `clock${Math.floor((experience - 1) / 6)}`
+      experience = Number(experience) - 1 + '';
+      this.object.system[clockToDecrement] = `systems/blades-in-the-dark/styles/assets/progressclocks-svg/Progress Clock 6-${experience % 6}.svg`
+      this.object.system.experience = experience
+      this.render(true)
+    })
 
     html.find(".coins-box").click(async (ev) => {
       if (!$(ev.target).closest(".coins-box .full-view").length) {

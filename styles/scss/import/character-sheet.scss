@@ -60,6 +60,22 @@
     border: none;
   }
 
+  .clockContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .clockButtons {
+    display: flex;
+    flex-direction: column
+  }
+
+  .expClock {
+    width: 100px;
+    border: none;
+  }
+
   .editor {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 0.5em;
